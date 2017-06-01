@@ -1,8 +1,24 @@
 import {Component} from '@angular/core';
+import {CheckoutService} from './checkout.service';
+import {Item} from "./item";
 
 @Component({
   selector: 'checkout-section',
-  template: `<h1>CHECKOUT</h1>`,
+  templateUrl: './checkout.component.html',
   styleUrls: ['../app.component.css']
 })
-export class CheckoutComponent{ }
+export class CheckoutComponent{
+
+  title: Item[];
+
+  //DI
+  constructor(private _checkoutService: CheckoutService){
+
+  }
+
+  ngOnInit(){
+    this._checkoutService.someMethod()
+      .subscribe(resItemData => this.title = resItemData);
+  }
+
+}

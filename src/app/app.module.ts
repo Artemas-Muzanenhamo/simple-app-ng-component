@@ -9,6 +9,7 @@ import {WorkComponent} from "./work/work.component";
 import {AboutComponent} from "./about/about.component";
 import {ContactComponent} from "./contact/contact.component";
 import {CheckoutComponent} from "./checkout/checkout.component";
+import {CheckoutService} from "./checkout/checkout.service";
 
 @NgModule({
   declarations: [
@@ -24,7 +25,7 @@ import {CheckoutComponent} from "./checkout/checkout.component";
     FormsModule,
     HttpModule,
   ],
-  providers: [],
+  providers: [CheckoutService],
   bootstrap: [
     AppComponent,
     IntroductionComponent,
