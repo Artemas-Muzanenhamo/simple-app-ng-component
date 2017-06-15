@@ -1,17 +1,17 @@
 import {Component} from '@angular/core';
 import {CheckoutService} from './checkout.service';
-import {Item} from "./item";
+import {Item} from './item';
 
 @Component({
-  selector: 'checkout-section',
+  selector: 'app-checkout-section',
   templateUrl: './checkout.component.html',
   styleUrls: ['../app.component.css']
 })
-export class CheckoutComponent{
+export class CheckoutComponent {
 
   title: Item[];
 
-  //DI
+  // DI
   constructor(private _checkoutService: CheckoutService){
 
   }
