@@ -5,7 +5,7 @@ import 'rxjs/add/operator/map'
 @Injectable()
 export class CheckoutService {
 
-  private _url: string = 'http://localhost:8080/basket';
+  private _url = 'http://localhost:8080/basket';
 
   // Calling an API
   constructor(private  _http: Http){}

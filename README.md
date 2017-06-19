@@ -31,7 +31,7 @@ Run `ng github-pages:deploy` to deploy to GitHub Pages.
 To get more help on the `angular-cli` use `ng help` or go check out the [Angular-CLI README](https://github.com/angular/angular-cli/blob/master/README.md).
 
 
-#Commands
+## Commands
 
 > `npm install -g angular-cli`
 
@@ -40,3 +40,14 @@ To get more help on the `angular-cli` use `ng help` or go check out the [Angular
 > `cd my-app-name`
 
 > `ng serve`
+
+
+## Dockerize Commands
+
+```
+$ npm install -g dockerize
+$ cd /path/to/your/node/app
+$ dockerize . > Dockerfile
+$ docker build -t yourname/project .
+
+```
