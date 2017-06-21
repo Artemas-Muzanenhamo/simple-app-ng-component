@@ -1,6 +1,10 @@
-export class Item{
-  id: string;
-  name: string;
-  description: string;
-  category: string;
+export class Item {
+
+  constructor(
+    public id: string,
+    public name: string,
+    public description: string,
+    public category: string
+  ) { }
+
 }
