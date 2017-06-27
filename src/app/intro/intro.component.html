@@ -1,7 +1,7 @@
 <div class="container">
   <h1>Item Form</h1>
   {{diagnostic}}
-  <form #itemForm="ngForm">
+  <form (ngSubmit)="onSubmit" #itemForm="ngForm">
     <div class="form-group">
       <label for="id">ID</label>
       <input type="text" class="form-control" id="id" required [(ngModel)]="model.id" name="id">
@@ -11,8 +11,7 @@
 
     <div class="form-group">
       <label for="name">Name</label>
-      <input type="text" class="form-control" id="name" required [(ngModel)]="model.name" name="name" #spy>
-      <br> TODO: remove this: {{spy.className}}
+      <input type="text" class="form-control" id="name" required [(ngModel)]="model.name" name="name">
     </div>
 
     <br>
@@ -31,7 +30,7 @@
 
     <br>
 
-    <button type="submit" class="btn btn-success">Submit</button>
+    <button type="submit" class="btn btn-success" [disabled]="!itemForm.form.valid">Submit</button>
 
   </form>
 </div>
