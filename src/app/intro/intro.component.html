@@ -30,7 +30,7 @@
 
     <br>
 
-    <button type="submit" class="btn btn-success" [disabled]="!itemForm.form.valid">Submit</button>
+    <button type="submit" (click)="add(model);" class="btn btn-success" [disabled]="!itemForm.form.valid">Submit</button>
 
   </form>
 </div>
