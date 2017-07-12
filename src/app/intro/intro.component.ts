@@ -13,13 +13,15 @@ export class IntroductionComponent {
 
   items: Item[];
 
-   model = new Item('dog', 'SkyDog', 'Fetch any object at any distance', 'Leslie Rollover');
+   // model = new Item('dog', 'SkyDog', 'Fetch any object at any distance', 'Leslie Rollover');
+
+  model = new Item('', '', '', '');
 
    submitted = false;
 
    onSubmit() {
      this.submitted = true;
-     this.add(this.model);
+     this.addItem(this.model);
    };
 
   // TODO: Remove this when we're done
@@ -28,9 +30,8 @@ export class IntroductionComponent {
   // Instantiate the Intro Service
   constructor (private introService: IntroService) { }
 
-  add(item: Item): void {
-    this.introService.addItems(item)
-      .then()
+  addItem(item: Item): void {
+    this.introService.addItems(item);
   }
 
 }

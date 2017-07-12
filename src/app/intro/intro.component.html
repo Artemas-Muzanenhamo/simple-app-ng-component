@@ -1,6 +1,6 @@
 <div class="container">
-  <h1>Item Form</h1>
-  {{diagnostic}}
+  <h1>Add Item Form</h1>
+  <!--{{diagnostic}}-->
   <form (ngSubmit)="onSubmit" #itemForm="ngForm">
     <div class="form-group">
       <label for="id">ID</label>
@@ -30,7 +30,7 @@
 
     <br>
 
-    <button type="submit" (click)="add(model);" class="btn btn-success" [disabled]="!itemForm.form.valid">Submit</button>
+    <button type="submit" (click)="addItem(model);" class="btn btn-success" [disabled]="!itemForm.form.valid">Submit</button>
 
   </form>
 </div>
